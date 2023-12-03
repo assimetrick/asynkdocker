@@ -1,2 +1,5 @@
 FROM python:2.7
-RUN pip install asynk
+WORKDIR /usr/local/asynk
+RUN git clone  --recursive https://github.com/skarra/ASynK.git
+WORKDIR /usr/local/asynk/ASynK
+RUN pip install -r requirements.txt
